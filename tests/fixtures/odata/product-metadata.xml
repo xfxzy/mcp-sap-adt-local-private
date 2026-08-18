@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+  <edmx:DataServices>
+    <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="API_PRODUCT_SRV">
+      <EntityType Name="A_ProductType">
+        <Key><PropertyRef Name="Product" /></Key>
+        <Property Name="Product" Type="Edm.String" Nullable="false" MaxLength="40" />
+        <Property Name="ProductType" Type="Edm.String" Nullable="false" MaxLength="4" />
+        <Property Name="BaseUnit" Type="Edm.String" Nullable="false" MaxLength="3" />
+        <Property Name="ProductGroup" Type="Edm.String" Nullable="true" MaxLength="9" />
+      </EntityType>
+      <EntityContainer Name="API_PRODUCT_SRV_Entities">
+        <EntitySet Name="A_Product" EntityType="API_PRODUCT_SRV.A_ProductType" />
+        <FunctionImport Name="ReleaseProduct" HttpMethod="POST" ReturnType="Edm.Boolean" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

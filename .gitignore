@@ -1,0 +1,7 @@
+.worktrees/
+dist/
+node_modules/
+coverage/
+*.log
+.env
+config/systems.yaml

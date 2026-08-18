@@ -1,0 +1,14 @@
+version: 1
+profiles:
+  s4-core-masterdata-approved:
+    services:
+      - id: API_PRODUCT
+        serviceRoot: /sap/opu/odata/sap/API_PRODUCT_SRV/
+        entities:
+          - entitySet: A_Product
+            keys: [Product]
+            operations: [read, create, update]
+            mutableFields: [ProductType, BaseUnit, ProductGroup]
+            immutableFields: [Product]
+            sensitiveFields: []
+            verifyFields: [Product, ProductType, BaseUnit, ProductGroup]

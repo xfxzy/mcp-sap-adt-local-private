@@ -1,0 +1,6 @@
+{
+  "default": {
+    "word": "assets/word-templates/default.docx",
+    "desc": "通用 FS 模板：微软雅黑、标题居中、表格全边框+表头底色、页脚页码。未指定客户时使用。"
+  }
+}
